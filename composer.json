@@ -1,103 +1,138 @@
 {
-  "name": "roblib/islandora-project",
-  "type": "project",
-  "description": "Project template for Islandora sites built with the Islandora+Lightning distribution.",
-  "license": "GPL-2.0-or-later",
-  "require": {
-      "acquia/lightning": "~5.1.0",
-      "cweagans/composer-patches": "^1.6.0",
-      "drupal/core-composer-scaffold": "*",
-      "masonry/masonry": "*",
-      "oomphinc/composer-installers-extender": "^1.1 || ^2",
-    "wikimedia/composer-merge-plugin": "2.x-dev",
-    "roblib/islandora_profile": "1.x-dev"
-  },
-  "require-dev": {
-      "drush/drush": ">=9.7",
-      "phpspec/prophecy-phpunit": "^2"
-  },
-  "config": {
-      "process-timeout": 0
-  },
-  "extra": {
-      "composer-exit-on-patch-failure": true,
-      "drupal-scaffold": {
-          "locations": {
-              "web-root": "docroot/"
+      "name":"roblib/islandora-project",
+      "type":"project",
+      "description":"Project template for Islandora sites built with the Islandora+Lightning distribution.",
+      "license":"GPL-2.0-or-later",
+      "require":{
+        "cweagans/composer-patches":"^1.6.0",
+        "drupal/core-composer-scaffold":"*",
+        "masonry/masonry":"*",
+        "oomphinc/composer-installers-extender":"^1.1 || ^2",
+        "wikimedia/composer-merge-plugin":"2.x-dev",
+        "islandora/islandora_install_profile_demo": "dev-profile_only"
+      },
+      "require-dev":{
+        "drush/drush":">=9.7",
+        "phpspec/prophecy-phpunit":"^2"
+      },
+      "config":{
+        "process-timeout":0
+      },
+      "extra":{
+        "composer-exit-on-patch-failure":true,
+        "drupal-scaffold":{
+          "locations":{
+            "web-root":"docroot/"
           }
-      },
-      "enable-patching": true,
-      "installer-paths": {
-          "docroot/core": [
-              "type:drupal-core"
+        },
+        "enable-patching":true,
+        "installer-paths":{
+          "docroot/core":[
+            "type:drupal-core"
           ],
-          "docroot/libraries/{$name}": [
-              "type:drupal-library",
-              "type:bower-asset",
-              "type:npm-asset"
+          "docroot/libraries/{$name}":[
+            "type:drupal-library",
+            "type:bower-asset",
+            "type:npm-asset"
           ],
-          "docroot/modules/contrib/{$name}": [
-              "type:drupal-module"
+          "docroot/modules/contrib/{$name}":[
+            "type:drupal-module"
           ],
-          "docroot/profiles/contrib/{$name}": [
-              "type:drupal-profile"
+          "docroot/profiles/contrib/{$name}":[
+            "type:drupal-profile"
           ],
-          "docroot/themes/contrib/{$name}": [
-              "type:drupal-theme"
+          "docroot/themes/contrib/{$name}":[
+            "type:drupal-theme"
           ],
-          "drush/contrib/{$name}": [
-              "type:drupal-drush"
+          "web/themes/custom/{$name}":[
+            "type:drupal-theme-custom"
+          ],
+          "drush/contrib/{$name}":[
+            "type:drupal-drush"
           ]
-      },
-      "installer-types": [
+        },
+        "installer-types":[
           "bower-asset",
           "npm-asset"
-      ],
-      "patchLevel": {
-          "drupal/core": "-p2"
+        ],
+        "patchLevel":{
+          "drupal/core":"-p2"
+        },
+        "merge-plugin":{
+          "include":[
+            "modules/contrib/masonry/composer.libraries.json"
+          ]
+        }
       },
-      "merge-plugin": {
-        "include": [
-          "modules/contrib/masonry/composer.libraries.json"
-        ]
-      }
+      "repositories":{
+        "drupal":{
+          "type":"composer",
+          "url":"https://packages.drupal.org/8"
+        },
+        "assets":{
+          "type":"composer",
+          "url":"https://asset-packagist.org"
+        },
+        "masonry":{
+          "type":"package",
+          "package":{
+            "type":"drupal-library",
+            "name":"masonry/masonry",
+            "version":"3.3.2",
+            "dist":{
+              "type":"zip",
+              "url":"https://github.com/desandro/masonry/archive/v3.3.2.zip"
+            }
+          }
+        },
+        "mjordan":{
+          "type":"package",
+          "package":{
+            "name":"mjordan/islandora_workbench_integration",
+            "version":"1.0",
+            "type":"drupal-module",
+            "source":{
+              "url":"https://github.com/mjordan/islandora_workbench_integration.git",
+              "type":"git",
+              "reference":"main"
+            }
+          }
 
-
-  },
-  "repositories": {
-      "roblib": {
-      "type": "vcs",
-      "url": "https://github.com/roblib/islandora_profile"
-    },
-    "drupal": {
-          "type": "composer",
-          "url": "https://packages.drupal.org/8"
-      },
-      "assets": {
-          "type": "composer",
-          "url": "https://asset-packagist.org"
-      },
-      "masonry": {
-        "type": "package",
-        "package": {
-          "type": "drupal-library",
-          "name": "masonry/masonry",
-          "version": "3.3.2",
-          "dist": {
-            "type": "zip",
-            "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip"
+        },
+        "pdfjs":{
+          "type":"package",
+          "package":{
+            "name":"library/pdf.js",
+            "version":"2.4.456",
+            "type":"drupal-library",
+            "dist":{
+              "url":"https://github.com/mozilla/pdf.js/releases/download/v2.4.456/pdfjs-2.4.456-dist.zip",
+              "type":"zip"
+            }
+          }
+        },
+        "openseadragon":{
+          "type":"package",
+          "package":{
+            "name":"library/openseadragon",
+            "version":"2.4.2",
+            "type":"drupal-library",
+            "dist":{
+              "url":"https://github.com/openseadragon/openseadragon/releases/download/v2.4.2/openseadragon-bin-2.4.2.zip",
+              "type":"zip"
+            }
           }
         }
-      }
 
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": false,
-  "scripts": {
-      "post-create-project-cmd": "rm -r -f .travis.yml .travis-ci",
-      "quick-start": [
-          "composer install",
-          "php docroot/core/scripts/drupal quick-start lightning --no-interaction"
+    },
+    "minimum-stability":"dev",
+    "prefer-stable":false,
+    "scripts":{
+      "post-create-project-cmd":"rm -r -f .travis.yml .travis-ci",
+      "quick-start":[
+        "composer install",
+        "php docroot/core/scripts/drupal quick-start lightning --no-interaction"
       ]
-  }
+    }
+
 }
