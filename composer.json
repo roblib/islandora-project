@@ -9,7 +9,7 @@
         "masonry/masonry":"*",
         "oomphinc/composer-installers-extender":"^1.1 || ^2",
         "wikimedia/composer-merge-plugin":"2.x-dev",
-        "islandora/islandora_install_profile_demo": "dev-profile_only"
+        "roblib/islandora_profile": "1.x-dev"
       },
       "require-dev":{
         "drush/drush":">=9.7",
@@ -22,26 +22,26 @@
         "composer-exit-on-patch-failure":true,
         "drupal-scaffold":{
           "locations":{
-            "web-root":"docroot/"
+            "web-root":"web/"
           }
         },
         "enable-patching":true,
         "installer-paths":{
-          "docroot/core":[
+          "web/core":[
             "type:drupal-core"
           ],
-          "docroot/libraries/{$name}":[
+          "web/libraries/{$name}":[
             "type:drupal-library",
             "type:bower-asset",
             "type:npm-asset"
           ],
-          "docroot/modules/contrib/{$name}":[
+          "web/modules/contrib/{$name}":[
             "type:drupal-module"
           ],
-          "docroot/profiles/contrib/{$name}":[
+          "web/profiles/contrib/{$name}":[
             "type:drupal-profile"
           ],
-          "docroot/themes/contrib/{$name}":[
+          "web/themes/contrib/{$name}":[
             "type:drupal-theme"
           ],
           "web/themes/custom/{$name}":[
@@ -65,6 +65,10 @@
         }
       },
       "repositories":{
+        "roblib": {
+          "type": "vcs",
+          "url": "https://github.com/roblib/islandora_profile"
+        },
         "drupal":{
           "type":"composer",
           "url":"https://packages.drupal.org/8"
@@ -131,7 +135,7 @@
       "post-create-project-cmd":"rm -r -f .travis.yml .travis-ci",
       "quick-start":[
         "composer install",
-        "php docroot/core/scripts/drupal quick-start lightning --no-interaction"
+        "php web/core/scripts/drupal quick-start lightning --no-interaction"
       ]
     }
 
