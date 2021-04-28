@@ -65,10 +65,6 @@
         }
       },
       "repositories":{
-        "roblib": {
-          "type": "vcs",
-          "url": "https://github.com/roblib/islandora_profile"
-        },
         "drupal":{
           "type":"composer",
           "url":"https://packages.drupal.org/8"
