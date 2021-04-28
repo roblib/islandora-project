@@ -9,7 +9,7 @@
         "masonry/masonry":"*",
         "oomphinc/composer-installers-extender":"^1.1 || ^2",
         "wikimedia/composer-merge-plugin":"2.x-dev",
-        "roblib/islandora_profile": "1.x-dev"
+        "roblib/islandora_profile": "bd-dev"
       },
       "require-dev":{
         "drush/drush":">=9.7",
