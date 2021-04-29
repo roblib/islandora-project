@@ -1,7 +1,7 @@
 {
       "name":"roblib/islandora-project",
       "type":"project",
-      "description":"Project template for Islandora sites built with the Islandora+Lightning distribution.",
+      "description":"Project template for Islandora sites.",
       "license":"GPL-2.0-or-later",
       "require":{
         "cweagans/composer-patches":"^1.6.0",
@@ -9,7 +9,6 @@
         "masonry/masonry":"*",
         "oomphinc/composer-installers-extender":"^1.1 || ^2",
         "wikimedia/composer-merge-plugin":"2.x-dev",
-        "islandora/islandora_install_profile_demo": "dev-main"
       },
       "require-dev":{
         "drush/drush":">=9.7",
