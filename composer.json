@@ -121,6 +121,10 @@
               "type":"zip"
             }
           }
+        },
+        "roblib": {
+          "type": "vcs",
+          "url": "https://github.com/roblib/islandora_profile"
         }
 
     },
