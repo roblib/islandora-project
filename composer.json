@@ -6,7 +6,7 @@
       "require":{
         "cweagans/composer-patches":"^1.6.0",
         "drupal/core-composer-scaffold":"*",
-        "masonry/masonry":"*",
+        "library/masonry":"*",
         "oomphinc/composer-installers-extender":"^1.1 || ^2",
         "wikimedia/composer-merge-plugin":"3.x-dev"
       },
