@@ -76,7 +76,7 @@
           "type":"package",
           "package":{
             "type":"drupal-library",
-            "name":"masonry/masonry",
+            "name":"library/masonry",
             "version":"3.3.2",
             "dist":{
               "type":"zip",
