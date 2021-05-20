@@ -8,7 +8,6 @@
         "drupal/core-composer-scaffold":"*",
         "library/masonry":"*",
         "oomphinc/composer-installers-extender":"^1.1 || ^2",
-        "islandora/islandora_install_profile_demo": "dev-main",
         "wikimedia/composer-merge-plugin":"2.x-dev"
       },
       "require-dev":{
@@ -122,6 +121,10 @@
               "type":"zip"
             }
           }
+        },
+        "islandora_profile": {
+          "type": "github",
+          "url": "https://github.com/roblib/islandora_profile"
         }
 
     },
