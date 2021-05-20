@@ -6,7 +6,7 @@
       "require":{
         "cweagans/composer-patches":"^1.6.0",
         "drupal/core-composer-scaffold":"*",
-        "masonry/masonry":"*",
+        "library/masonry":"*",
         "oomphinc/composer-installers-extender":"^1.1 || ^2",
         "wikimedia/composer-merge-plugin":"2.x-dev"
       },
@@ -122,8 +122,8 @@
             }
           }
         },
-        "roblib": {
-          "type": "vcs",
+        "islandora_profile": {
+          "type": "github",
           "url": "https://github.com/roblib/islandora_profile"
         }
 
