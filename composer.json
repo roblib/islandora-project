@@ -121,12 +121,7 @@
               "type":"zip"
             }
           }
-        },
-        "islandora_profile": {
-          "type": "github",
-          "url": "https://github.com/roblib/islandora_profile"
         }
-
     },
     "minimum-stability":"dev",
     "prefer-stable":false,
