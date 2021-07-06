@@ -8,9 +8,7 @@
         "drupal/core-composer-scaffold":"*",
         "library/masonry":"*",
         "oomphinc/composer-installers-extender":"^1.1 || ^2",
-        "wikimedia/composer-merge-plugin":"2.x-dev",
-            "islandora/islandora_profile": "dev-1.x",
-            "islandora-rdm/islandora_rdm": "dev-8.x-1.x"
+        "wikimedia/composer-merge-plugin":"2.x-dev"
       },
       "require-dev":{
         "drush/drush":">=9.7",
