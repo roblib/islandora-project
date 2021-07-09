@@ -68,6 +68,46 @@
           "type":"composer",
           "url":"https://packages.drupal.org/8"
         },
+        "islandora":{
+          "type":"package",
+          "package":{
+            "name":"islandora/islandora",
+            "version":"dev-8.x-1.x",
+            "type":"drupal-module",
+            "source":{
+              "url":"https://github.com/Islandora/islandora.git",
+              "type":"git",
+              "reference":"8.x-1.x"
+            }
+          }
+        },
+        "islandora_defaults":{
+          "type":"package",
+          "package":{
+            "name":"islandora/islandora_defaults",
+            "version":"dev-8.x-1.x",
+            "type":"drupal-module",
+            "source":{
+              "url":"https://github.com/islandora/islandora_defaults.git",
+              "type":"git",
+              "reference":"8.x-1.x"
+            }
+          }
+        },
+        "islandora_profile":{
+          "type":"package",
+          "package":{
+            "name":"islandora/islandora_profile",
+            "version":"dev-1.x",
+            "type":"drupal-profile",
+            "source":{
+              "url":"https://github.com/Islandora-Devops/islandora_profile.git",
+              "type":"git",
+              "reference":"1.x"
+            }
+          }
+
+        },
         "assets":{
           "type":"composer",
           "url":"https://asset-packagist.org"
