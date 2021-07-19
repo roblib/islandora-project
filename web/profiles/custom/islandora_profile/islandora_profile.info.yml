@@ -1,0 +1,66 @@
+name: 'Islandora'
+type: profile
+description: 'Content types and workflows for an Islandora digital repository.'
+core_version_requirement: '^8.0 || ^9'
+install:
+  - node
+  - history
+  - block
+  - breakpoint
+  - ckeditor
+  - color
+  - config
+  - comment
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - big_pipe
+  - taxonomy
+  - dblog
+  - search
+  - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - views
+  - views_ui
+  - tour
+  - automated_cron
+  - rdf
+  - responsive_image
+  - syslog
+  - serialization
+  - basic_auth
+  - rest
+  - restui
+  - devel
+  - search_api_solr
+  - facets
+  - content_browser
+  - matomo
+  - pdf
+  - admin_toolbar
+  - transliterate_filenames
+  - islandora_defaults
+  - controlled_access_terms_defaults
+  - islandora_defaults
+  - islandora_fits
+  - islandora_breadcrumbs
+  - islandora_iiif
+  - islandora_oaipmh
+themes:
+  - bartik
+  - claro
+  - seven
